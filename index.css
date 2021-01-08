@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+/* I. Phone Styles */
+/* Overarching div styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+}
+main#main {
+  width: 100%;
+  background: hsl(0, 0%, 95%);
+  padding: 2em 1em;
+}
+div#tribute-info-div {
+  width: 100%;
+}
+
+/* General font styles */
+h1#title,
+h2#timeline-title {
+  font-family: "Merriweather", "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+p#sub-title,
+p#img-caption,
+p#tribute-info,
+p#closing,
+li {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 25%);
+}
+a {
+  color: #0d3169;
+}
+a:hover {
+  color: #1f69e0;
+}
+a:active {
+  color: #13479b;
+}
+
+/* Headings */
+h1#title {
+  font-size: 2.5rem;
+}
+p#sub-title {
+  font-size: 1rem;
+}
+h2#timeline-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+/* Paragraphs and lists */
+p#img-caption {
+  font-size: 1rem;
+  font-style: italic;
+  text-align: center;
+}
+p#tribute-info,
+ul,
+li {
+  font-size: 1rem;
+  text-align: justify;
+}
+ul {
+  margin-left: 2em;
+}
+ul#main-list {
+  margin: 1em 0 0 2em;
+}
+p#closing {
+  background: hsl(0, 0%, 90%);
+  padding: 1.5em;
+  margin-top: 2em;
+  border-radius: 1em;
+  font-weight: 700;
+}
+
+/* Images */
+div#img-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: white;
+  margin: 1.5em 0 2em;
+  padding: 1.5em;
+  border-radius: 20px;
+}
+img#image {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto 1em auto;
+}
+
+/* II. Tablet Styles */
+@media (min-width: 600px) {
+  main#main {
+    padding: 3em 2em;
+    max-width: 650px;
+  }
+}
+
+/* III. Desktop Styles */
+@media (min-width: 1200px) {
+  main#main {
+    display: grid;
+    grid-template-columns: 1.8fr 1.2fr;
+    grid-template-rows: auto;
+    grid-gap: 2em;
+    padding: 5em 4em;
+    max-width: 1250px;
+  }
+
+  h1#title {
+    font-size: 2.7rem;
+  }
+  div#img-div {
+    margin: 1.5em 0 0;
+  }
+  div#tribute-title-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
