@@ -28,10 +28,11 @@ h2#timeline-title {
   font-weight: 900;
 }
 p#sub-title,
-p#img-caption,
+figcaption#img-caption,
 p#tribute-info,
 p#closing,
-li {
+li,
+blockquote {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
   font-weight: 400;
   color: hsl(0, 0%, 25%);
@@ -60,7 +61,7 @@ h2#timeline-title {
 }
 
 /* Paragraphs and lists */
-p#img-caption {
+figcaption#img-caption {
   font-size: 1rem;
   font-style: italic;
   text-align: center;
@@ -75,18 +76,38 @@ ul {
   margin-left: 2em;
 }
 ul#main-list {
-  margin: 1em 0 0 2em;
+  margin: 1em 0 1em 2em;
+}
+blockquote {
+  position: relative;
+  overflow: hidden;
+  background-color: hsl(0, 0%, 100%);
+  margin-bottom: 1em;
+  padding: 1.5em 1.5em 1.5em 2em;
+  border-radius: 0.5em;
+  font-style: italic;
+}
+blockquote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.5em;
+  background: hsl(0, 0%, 90%);
+}
+p#quote-body {
+  margin-bottom: 1em;
 }
 p#closing {
   background: hsl(0, 0%, 90%);
   padding: 1.5em;
-  margin-top: 2em;
-  border-radius: 1em;
+  border-radius: 0.5em;
   font-weight: 700;
 }
 
 /* Images */
-div#img-div {
+figure#img-div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,12 +146,10 @@ img#image {
   h1#title {
     font-size: 2.7rem;
   }
-  div#img-div {
-    margin: 1.5em 0 0;
+  h2#timeline-title {
+    text-align: left;
   }
-  div#tribute-title-div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  figure#img-div {
+    margin: 1.5em 0 0;
   }
 }
