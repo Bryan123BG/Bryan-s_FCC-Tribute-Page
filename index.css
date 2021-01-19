@@ -128,7 +128,7 @@ img#image {
 @media (min-width: 600px) {
   main#main {
     padding: 3em 2em;
-    max-width: 650px;
+    max-width: 40em;
   }
 }
 
@@ -140,7 +140,7 @@ img#image {
     grid-template-rows: auto;
     grid-gap: 2em;
     padding: 5em 4em;
-    max-width: 1250px;
+    max-width: 80em;
   }
 
   h1#title {
